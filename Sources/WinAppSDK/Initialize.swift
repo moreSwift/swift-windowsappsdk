@@ -82,7 +82,7 @@ public class WindowsAppRuntimeInitializer {
             try CHECKED(Initialize(
                 UInt32(WINDOWSAPPSDK_RELEASE_MAJORMINOR),
                 WINDOWSAPPSDK_RELEASE_VERSION_TAG_SWIFT,
-                unsafeBitCast(WINDOWSAPPSDK_RUNTIME_VERSION_UINT64, to: PACKAGE_VERSION.self),
+                .init(),
                 MddBootstrapInitializeOptions(
                     showUIOnNoMatch
                         ? MddBootstrapInitializeOptions_OnNoMatch_ShowUI.rawValue
